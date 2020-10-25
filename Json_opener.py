@@ -2,20 +2,18 @@ import click
 import json
 import logging
 
+logging.basicConfig(filename="errors.log", filemode="w",
+                    format=u'# %(levelname)s [%(asctime)s]  %(message)s',
+                    level=logging.INFO)
+
 
 def get_value(path, key):
-    path = rf'{path}'
     with open(path, "r") as json_file:
         data = json.load(json_file)
     if key == '*':
         return data
     else:
         return data[key]
-
-
-logging.basicConfig(filename="errors.log", filemode="w",
-                    format=u'# %(levelname)s [%(asctime)s]  %(message)s',
-                    level=logging.INFO)
 
 
 @click.command()
