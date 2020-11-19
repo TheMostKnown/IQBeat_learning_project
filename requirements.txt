@@ -1,0 +1,1 @@
+script needs a Click package to be installed
