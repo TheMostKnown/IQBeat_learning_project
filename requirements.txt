@@ -1,1 +1,2 @@
-script needs a Click package to be installed
+simple script needs a Click v7.1.2 package to be installed
+web script needs Django v3.1.3 framework to be installed
